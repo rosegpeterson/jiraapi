@@ -3,20 +3,20 @@ jirasec: {
     JIRA_TOKEN:'HRsrB1KCDQD5m7hvmVcw6F33'
 }
 
-csmproj: {
-    JIRA_PROJECT_KEY: "CADITSM",
-    JIRA_PROJECT: "Cadalys - Service Management",
-    JIRA_SPRINT: "Sprint 24 - Raleigh",
-    JIRA_SPRINT_KEY: "Sprint24",
+rpl: {
+    JIRA_PROJECT_KEY: "RPP",
+    JIRA_PROJECT: "RPPPRJ",
+    JIRA_SPRINT: "Sprint 1",
+    JIRA_SPRINT_KEY: "Sprint1",
     SPRINT_START_DATE:"2021-08-10",
     SPRINT_END_DATE:"2021-08-24",
 }
 
-conciergeproj: {
-    JIRA_PROJECT_KEY: "CADALYSCNG",
-    JIRA_PROJECT: "Cadalys - Concierge",
-    JIRA_SPRINT: "Sprint 11 - Paris",
-    JIRA_SPRINT_KEY: "Sprint11",
+rppproj: {
+    JIRA_PROJECT_KEY: "RPL",
+    JIRA_PROJECT: "RPL1",
+    JIRA_SPRINT: "Sprint 1",
+    JIRA_SPRINT_KEY: "Sprint1",
     SPRINT_START_DATE:"2021-08-17",
     SPRINT_END_DATE:"2021-08-31",
 }

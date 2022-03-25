@@ -24,7 +24,7 @@ JIRA_URL="https://summusappgroup.atlassian.net"
 JIRA_USERNAME = "rosegpeterson@gmail.com"
 #JIRA_PASSWORD=getpass.getpass(prompt='Password: ', stream=None) 
 JIRA_TOKEN="HRsrB1KCDQD5m7hvmVcw6F33" # https://id.atlassian.com/manage/api-tokens
-JIRA_PROJECT_KEY = "CCIQ"
+JIRA_PROJECT_KEY = "RPP"
 JIRA_ISSUE_TYPE = "Story"
 
 # Auth via token
@@ -53,7 +53,7 @@ def jira_rest_dev():
 
     #JQL - custom field Development=11500
     query = """
-    PROJECT = "CCIQ"
+    PROJECT = "RPP"
     AND status not in ("Not Needed", "Needs Info", Back-Burner, Closed, Resolved, Closed., Resolved., Cancelled, Done, Released) 
     AND issuetype = Story
     AND development[commits].all > 5
@@ -72,6 +72,6 @@ def jira_rest_dev():
 
 
 jira_rest_dev()
-#jira_rest_inf_issue('CCIQ-963')
+#jira_rest_inf_issue('RPP-963')
 
 exit(0)

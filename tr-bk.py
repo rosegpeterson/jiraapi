@@ -25,7 +25,7 @@ JIRA_API="/rest/api/2/"
 JIRA_USERNAME = "rosegpeterson@gmail.com"
 #JIRA_PASSWORD=getpass.getpass(prompt='Password: ', stream=None) 
 JIRA_TOKEN="HRsrB1KCDQD5m7hvmVcw6F33" # https://id.atlassian.com/manage/api-tokens
-JIRA_PROJECT_KEY = "CCIQ"
+JIRA_PROJECT_KEY = "RPP"
 JIRA_ISSUE_TYPE = "Story"
 
 # Auth via token 
@@ -59,7 +59,7 @@ def get_transitions(data):
         print("Failed to connect to ", url, "Error: ",  e)
         return 1
 
-    issue = jira_instance.issue('CCIQ-1241')
+    issue = jira_instance.issue('RPP-1241')
     print("Issue transitions ====>",issue)
     transitions = jira_instance.transitions(issue)
     [(t['id'], t['name']) for t in transitions] 
@@ -70,7 +70,7 @@ def get_transitions(data):
     json_data= json.loads(response.content)
     #print("ALL transitions ====>", json_data, "\n<======= All transitions\n")
 
-    workflowName='CCIQ SDLC WORKFLOW'
+    workflowName='RPP SDLC WORKFLOW'
     tr_url=url + 'workflow/search?expand=transitions&workflowName=' + workflowName
     response = requests.get(tr_url, auth=auth)
     json_data= json.loads(response.content)
@@ -100,7 +100,7 @@ def jira_jql():
 
     #JQL - custom field Development=11500
     query = """
-    PROJECT = "CCIQ"
+    PROJECT = "RPP"
     AND status not in ("Not Needed", "Needs Info", Back-Burner, Closed, Resolved, Closed., Resolved., Cancelled, Done, Released) 
     AND issuetype = Story
     AND development[commits].all > 5
@@ -118,8 +118,8 @@ def jira_jql():
    # PEND get start commit end commit dates =>
 
 
-jira_rest_issuetypes('project/CCIQ/statuses')
-get_transitions('project/CCIQ/statuses')
+jira_rest_issuetypes('project/RPP/statuses')
+get_transitions('project/RPP/statuses')
 #jira_jql()
 
 exit(0)

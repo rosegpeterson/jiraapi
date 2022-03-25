@@ -1,4 +1,4 @@
-"""
+RPP
 REST API Jira - 
 """
 
@@ -26,9 +26,9 @@ JIRA_API="/rest/api/2/"
 JIRA_USERNAME = "rosegpeterson@gmail.com"
 #JIRA_PASSWORD=getpass.getpass(prompt='Password: ', stream=None) 
 JIRA_TOKEN="HRsrB1KCDQD5m7hvmVcw6F33" # https://id.atlassian.com/manage/api-tokens
-JIRA_PROJECT_KEY = "CCIQ"
+JIRA_PROJECT_KEY = "RPP"
 JIRA_ISSUE_TYPE = "Story"
-JIRA_PROJECT = "Cadalys - CareIQ"
+JIRA_PROJECT = "RPP"
 
 # Auth via token 
 url = JIRA_URL  + JIRA_API
@@ -61,7 +61,7 @@ def get_transitions(data):
         print("Failed to connect to ", url, "Error: ",  e)
         return 1
 
-    issue = jira_instance.issue('CCIQ-1241')
+    issue = jira_instance.issue('RPP-1241')
     print("Issue transitions ====>",issue)
     transitions = jira_instance.transitions(issue)
     [(t['id'], t['name']) for t in transitions] 
@@ -72,7 +72,7 @@ def get_transitions(data):
     json_data= json.loads(response.content)
     #print("ALL transitions ====>", json_data, "\n<======= All transitions\n")
 
-    workflowName='CCIQ SDLC WORKFLOW'
+    workflowName='RPP SDLC WORKFLOW'
     tr_url=url + 'workflow/search?expand=transitions&workflowName=' + workflowName
     response = requests.get(tr_url, auth=auth)
     json_data= json.loads(response.content)
@@ -110,7 +110,7 @@ def jira_jql():
 
     #JQL - custom field Development=11500
     query = """
-    PROJECT = "CCIQ"
+    PROJECT = "RPP"
     AND status not in ("Not Needed", "Needs Info", Back-Burner, Closed, Resolved, Closed., Resolved., Cancelled, Done, Released) 
     AND issuetype = Story
     AND development[commits].all > 5
@@ -142,7 +142,7 @@ def get_issues_sprint(sprint_name):
     #print("Active sprint issues:  ", len(active_sprints))
     #for sprint in active_sprints:
     #    print(sprint)
-    #search_issue= 'project="Cadalys - CareIQ"'
+    #search_issue= 'project="RPP"'
     search_issue= 'project="' + JIRA_PROJECT + '"'
     issues_in_sprint = jira_instance.search_issues(search_issue + ' and issuetype not in subTaskIssueTypes() AND SPRINT in openSprints() ORDER BY key', maxResults=MAX_RESULTS, expand='changelog' )
     print("\nNumber of issues in sprint: ", len(issues_in_sprint))
@@ -189,8 +189,8 @@ def get_issues_info(issues_in_sprint):
 
 
 # **** MAIN
-#jira_rest_issuetypes('project/CCIQ/statuses')
-#get_transitions('project/CCIQ/statuses')
+#jira_rest_issuetypes('project/RPP/statuses')
+#get_transitions('project/RPP/statuses')
 #jira_jql()
 #get_projects()
 
