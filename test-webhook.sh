@@ -1,0 +1,1 @@
+curl -H 'Content-Type: application/json' -d '{"text": "Hello World"}' https://cadalys.webhook.office.com/webhookb2/dd324734-e442-4d08-9fc2-97992113f155@f78a6602-fc46-4233-961a-57bfe58a8a19/JIRA/c000d3ab4eb4458bb9dc17c5c1a60a77/26223b99-865a-45b4-8f7d-b1e95c05a23d
