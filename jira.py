@@ -1,5 +1,6 @@
 """
 REST API Jira - get Development - Get transition statuses ids
+ALL
 """
 
 import sys
