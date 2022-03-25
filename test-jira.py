@@ -20,8 +20,8 @@ except Exception as e:
     print(e)
 
 # Jira settings
-JIRA_URL="https://cadalys.atlassian.net"
-JIRA_USERNAME = "rose.peterson@cadalys.com"
+JIRA_URL="https://summusappgroup.atlassian.net"
+JIRA_USERNAME = "rosegpeterson@gmail.com"
 #JIRA_PASSWORD=getpass.getpass(prompt='Password: ', stream=None) 
 JIRA_TOKEN="HRsrB1KCDQD5m7hvmVcw6F33" # https://id.atlassian.com/manage/api-tokens
 JIRA_PROJECT_KEY = "CCIQ"

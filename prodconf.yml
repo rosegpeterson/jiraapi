@@ -1,5 +1,5 @@
 jirasec: {
-    JIRA_USERNAME:'rose.peterson@cadalys.com',
+    JIRA_USERNAME:'rosegpeterson@gmail.com',
     JIRA_TOKEN:'HRsrB1KCDQD5m7hvmVcw6F33'
 }
 
@@ -22,7 +22,7 @@ conciergeproj: {
 }
 
 params:
-    JIRA_URL: 'https://cadalys.atlassian.net'
+    JIRA_URL: 'https://summusappgroup.atlassian.net'
     JIRA_API: '/rest/api/2/'
 
 

@@ -21,9 +21,9 @@ except Exception as e:
     print(e)
 
 # Jira settings
-JIRA_URL="https://cadalys.atlassian.net"
+JIRA_URL="https://summusappgroup.atlassian.net"
 JIRA_API="/rest/api/2/"
-JIRA_USERNAME = "rose.peterson@cadalys.com"
+JIRA_USERNAME = "rosegpeterson@gmail.com"
 #JIRA_PASSWORD=getpass.getpass(prompt='Password: ', stream=None) 
 JIRA_TOKEN="HRsrB1KCDQD5m7hvmVcw6F33" # https://id.atlassian.com/manage/api-tokens
 JIRA_PROJECT_KEY = "CCIQ"
@@ -84,8 +84,8 @@ def get_transitions(data):
 
     return 0
 
-    #https://cadalys.atlassian.net/rest/api/3/workflow/transitions/{transitionId}/properties?workflowName={workflowName}' \
-    #https://cadalys.atlassian.net/rest/api/3/workflow
+    #https://summusappgroup.atlassian.net/rest/api/3/workflow/transitions/{transitionId}/properties?workflowName={workflowName}' \
+    #https://summusappgroup.atlassian.net/rest/api/3/workflow
 
 def get_projects():
     url = JIRA_URL
